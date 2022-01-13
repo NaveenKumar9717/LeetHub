@@ -4,10 +4,7 @@ public:
     int maxK=0;
     KthLargest(int k, vector<int>& nums) {
         maxK =k;
-       while(!qu.empty())
-        {
-            qu.pop();
-        }
+      
         for(int i =0 ;i <nums.size();i++){
             qu.push(nums[i]);
             while(qu.size()>k){
