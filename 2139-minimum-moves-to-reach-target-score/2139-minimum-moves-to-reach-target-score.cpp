@@ -17,7 +17,25 @@ public:
 }
 
     int minMoves(int target, int maxDoubles) {
-       return minMovesH(target,maxDoubles,0);
-        
+       //return minMovesH(target,maxDoubles,0);
+       int steps = 0; 
+       while(target > 1){
+           if(maxDoubles > 0){
+               if(target%2 == 0){
+                   target /= 2;
+                   maxDoubles -= 1;
+               }
+               else{
+                   target -= 1;
+               }
+                 steps++;   
+           }
+           else{
+               
+               steps = steps + target -1; 
+               target = 1;
+           }
+       }    
+      return steps;  
     }
 };
