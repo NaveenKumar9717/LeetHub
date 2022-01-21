@@ -33,7 +33,7 @@ public:
         while(mink <= maxk){
             int mid = (mink+maxk)/2;
             if(isPossible(piles,mid,h)){
-                cout<<"mid :"<<mid<<endl;
+                //cout<<"mid :"<<mid<<endl;
                 ans = min(ans,mid);
              maxk = mid- 1; 
             }
