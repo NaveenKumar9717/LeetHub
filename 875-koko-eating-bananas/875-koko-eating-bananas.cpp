@@ -27,7 +27,7 @@ public:
         int mink = 0;
         int maxk = high;
         
-        cout<<"maxk"<<maxk<<endl;
+        //cout<<"maxk"<<maxk<<endl;
         int ans = maxk;
       //  cout<<isPossible(piles,3,8);
         while(mink <= maxk){
