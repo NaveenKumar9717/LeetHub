@@ -36,10 +36,10 @@ combinationSumH(candidates,target,index+1,ans,v);
     }
     
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
-//      vector<vector<int>>ans;
-//         // vector<int>v;
-//         //  combinationSumH(candidates,target,0,ans,v);
-//          // return ans;
+     vector<vector<int>>ans;
+        vector<int>v;
+         combinationSumH(candidates,target,0,ans,v);
+         return ans;
 //          vector<int> dp[candidates.size()+1][target+1];
 //          for(int i = 0 ;i <=target;i++){
 //              vector<int>v;
@@ -63,9 +63,9 @@ combinationSumH(candidates,target,index+1,ans,v);
         
 //          //memset(dp,-1,sizeof(dp));
 //          return ans;
-         vector<vector<int>> ans;
-        vector<int> currComb;
-        combination(candidates, target, currComb, 0, 0, ans);
-        return ans;
+        //  vector<vector<int>> ans;
+        // vector<int> currComb;
+        // combination(candidates, target, currComb, 0, 0, ans);
+        // return ans;
     }
 };
