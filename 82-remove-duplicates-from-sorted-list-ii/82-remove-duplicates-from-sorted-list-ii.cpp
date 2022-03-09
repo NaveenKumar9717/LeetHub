@@ -18,29 +18,35 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-class Solution {
+class Solution
+{
 public:
-    ListNode* deleteDuplicates(ListNode* head) {
-        if(!head || !head ->next)
+    ListNode *deleteDuplicates(ListNode *head)
+    {
+        if (!head || !head->next)
             return head;
-        
-        ListNode* dummy = new ListNode(999);
-        ListNode* temp = dummy;
-        
-        while(head && head->next){
-            if(head->val != head->next->val){
+
+        ListNode *dummy = new ListNode(999);
+        ListNode *temp = dummy;
+
+        while (head && head->next)
+        {
+            if (head->val != head->next->val)
+            {
                 temp->next = head;
                 temp = temp->next;
                 head = head->next;
-            
             }
-            else{ temp->next = NULL;
+            else
+            {
+                temp->next = NULL;
                 int rep = head->val;
-                while( head && head->val == rep )
+                while (head && head->val == rep)
                     head = head->next;
             }
         }
-        if(head){
+        if (head)
+        {
             temp->next = head;
             temp = temp->next;
         }
