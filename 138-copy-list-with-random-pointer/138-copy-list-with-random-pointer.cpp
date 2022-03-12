@@ -16,15 +16,7 @@ public:
 
 class Solution {
 public:
-    void print( Node* head){
-        while(head){
-            if(head->random)
-            cout<<head->val<<" rand--> "<<head->random->val<<endl;
-            else
-             cout<<head->val<<" rand--> "<<"null"<<endl;
-            head = head->next;
-        }
-    }
+   
     Node* copyRandomList(Node* head) {
         Node*dummy = new Node(55555);
         Node* temp =  dummy;
