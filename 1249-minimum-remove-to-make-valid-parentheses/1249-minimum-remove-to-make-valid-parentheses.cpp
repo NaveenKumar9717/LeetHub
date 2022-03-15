@@ -1,9 +1,9 @@
 class Solution {
 public:
-    string minRemoveToMakeValid(string s) {
+    std::string minRemoveToMakeValid(string s) {
         
-        stack<pair<char,int>>stk;
-        string ans ;
+        std::stack<pair<char,int>>stk;
+        std::string ans ;
         int n = s.length();
         for(int i = 0 ; i < n;i++){
             if(s[i] == '('){
