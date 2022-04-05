@@ -6,12 +6,12 @@ public:
         int j = height.size() -1 ; 
         while(i < j ){
             if(height[i] <= height[j]){
-               max_water = max(max_water,min(height[i],height[j])*(j-i)) ; 
+               max_water = max(max_water,height[i]*(j-i)) ; 
                i++;
             }
             else{
                 //cout<<height[i]<<" - --"<<height[j]<<endl;
-                 int x = (j-i)*min(height[i],height[j]) ; 
+                 int x = (j-i)*height[j] ; 
                  max_water = max(max_water,x) ; 
                  j--;
                 }
