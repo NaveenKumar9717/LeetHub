@@ -1,15 +1,17 @@
+vector<int> buy(5000,0);
+vector<int> sell(5000,0);
+
 class Solution {
 public:
-    
     int maxProfit(vector<int>& prices) {
         
       //thanks @ Pragya_Anand great ..
         int days = prices.size();
         if(days <= 1)
             return 0;
-        
-        vector<int> buy(days,0);
-        vector<int> sell(days,0);    
+        //vector<int> buy(days,0);
+        //vector<int> sell(days,0);    
+       
         buy[0] -= prices[0];
         sell[0] = 0;
         
